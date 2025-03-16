@@ -1,0 +1,40 @@
+{
+    "name": "qcolor-preview",
+    "displayName": "QColor Preview",
+    "description": "Preview QColor values in Python code",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marotron/vsce-qcolor-preview.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:python"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "qcolor-preview.toggle",
+                "title": "Toggle QColor Preview"
+            }
+        ]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.60.0",
+        "eslint": "^8.1.0",
+        "glob": "^7.1.7",
+        "mocha": "^9.1.3"
+    }
+}
